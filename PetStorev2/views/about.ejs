@@ -1,0 +1,59 @@
+<%- include('../partials/header.ejs') %>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MC Pets</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<style type="text/css">
+		
+		html {
+			height: 100%;
+		}
+		body{
+			background: url(https://images.unsplash.com/photo-1516139008210-96e45dccd83b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80);
+			background-size: 100%;
+			background-position: center bottom;
+			font-family: lato;
+			color: rgb(0,0,0);
+		}
+
+		#content {
+			text-align: center;
+			padding-top: 25%;
+			/*
+				text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+							 0px 8px 13px rgba(0,0,0,0.2),
+							 0px 18px 23px rgba(0,0,0,0.1);
+			*/
+		}
+
+		h1 {
+			text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+			font-weight: 700;
+			font-size: 5em;
+		}
+
+		hr {
+			width: 400px;
+			border-top: 1px solid #f8f8f8;
+			border-bottom: 1px solid rgba(0,0,0,0.2)
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<h1>About MC Pets</h1>
+		<div class = "left-half">
+			<article>
+			<h2>
+			MC Pets is an online database of wonderful pets who are in search for a forever home. We currently are in search of homes for dogs and cats, but in time, we hope to help furry animals of a larger variety. Our mission is to find the most suitable home for our animals, as well as the most suitable additions to your home. We love all of our favorite four legged friends and our goal is to find them a loving home!
+			</h2>
+			</article>
+		</div>
+	</div>
+	
+<%- include('../partials/footer.ejs') %>

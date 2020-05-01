@@ -1,0 +1,33 @@
+<%- include('../../partials/header.ejs') %>
+
+<div class="container">
+	<header class="jumbotron">
+		<div class="container">
+			<h1>Available Pets</h1>
+			<p>View our currently available and adorable dogs and cats for sale!</p>
+		</div>
+	</header>
+	
+	<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+		<% pets.forEach(function(pet){ %>
+			<% if(pet.in_stock == 1) { %>
+				<div class="col-md-3 col-sm-6">
+					<div class="thumbnail">
+						<img src="<%=pet.image_url %>">
+						<div class="caption">
+							<h4>
+								<%= pet.pet_name %>
+							</h4>
+						</div>
+						<p>
+							<a href="/pets/<%= pet.pet_id %>" class="btn btn-primary">More Info</a>
+						</p>
+					</div>
+				</div>
+			<% } %>
+		<% }); %>
+	</div>
+		
+</div>
+
+<%- include('../../partials/footer.ejs') %>

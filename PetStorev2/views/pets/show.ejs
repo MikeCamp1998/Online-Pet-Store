@@ -1,0 +1,50 @@
+<%- include("../../partials/header") %>
+
+<div class="container">
+	<div class="row">
+		<div class= "col-md-3">
+			<p class="lead">
+				More info on <%=pet[0].pet_name%>
+			</p>
+			<div class="list-group">
+				<li class="list-group-item active">Category - <%=pet[0].category%></li>
+				<li class="list-group-item">Breed - <%=pet[0].breed%></li>
+				<li class="list-group-item">Gender - <%=pet[0].gender%></li>
+				<li class="list-group-item">Date of Birth - <%= pet[0].pet_dob%></li>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="thumbnail">
+				<img class="img-responsive" src="<%= pet[0].image_url %>">
+				<div class="caption-full">
+					<h4 class="pull-right">
+						Price - $<%= pet[0].price %>
+					</h4>
+					<h4>
+						<a><%=pet[0].pet_name%></a>
+					</h4>
+					<p>
+						<%=pet[0].description%>
+					</p>
+					<% if (currentUser && pet[0].in_stock == 1){ %>
+					<form action="/cart/<%=currentUser.id%>/<%=pet[0].pet_id%>" method="POST">
+						<button class="btn btn-xl btn-info">
+							Add To Cart
+						</button>
+					</form>
+					<% } else if(pet[0].in_stock == 0){ %> 
+						<a href="#" class="btn btn-xl btn-danger">
+						Out of Stock!
+					</a>
+					<% } else { %> 
+					<a href="/login" class="btn btn-xl btn-info">
+						Sign in to Add to Cart
+					</a>
+					<% } %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%- include("../../partials/footer") %>
